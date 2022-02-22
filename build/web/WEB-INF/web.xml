@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+    <servlet>
+        <servlet-name>SaveMovieRating</servlet-name>
+        <servlet-class>Controller.SaveMovieRating</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UpdateMovieRating</servlet-name>
+        <servlet-class>Controller.UpdateMovieRating</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>GetAllMovieList</servlet-name>
+        <servlet-class>Controller.GetAllMovieList</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DeleteMovie</servlet-name>
+        <servlet-class>Controller.DeleteMovie</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SaveMovieRating</servlet-name>
+        <url-pattern>/SaveMovieRating</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdateMovieRating</servlet-name>
+        <url-pattern>/UpdateMovieRating</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetAllMovieList</servlet-name>
+        <url-pattern>/GetAllMovieList</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeleteMovie</servlet-name>
+        <url-pattern>/DeleteMovie</url-pattern>
+    </servlet-mapping>
+    <context-param>
+        <param-name>dbname</param-name>
+        <param-value>movietable</param-value>
+    </context-param>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
